@@ -1,5 +1,17 @@
+import { useEffect, useState } from "react";
+import Spinner from "./components/Spinner";
+
 export default function App() {
+  const [isActive, setIsActive] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsActive(false);
+    }, 3000);
+  }, []);
+
   return (
-    <h1 className="bg-gray-50 text-3xl font-bold underline">Hello world!</h1>
+    <div className="flex h-screen w-full items-center justify-center">
+      {isActive && <Spinner />}
+    </div>
   );
 }
