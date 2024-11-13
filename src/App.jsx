@@ -1,5 +1,9 @@
+import FavoriteColor from "./components/FavoriteColor";
+
 export default function App() {
   return (
-    <h1 className="bg-gray-50 text-3xl font-bold underline">Hello world!</h1>
+    <div className="flex h-screen w-full items-center justify-center">
+      <FavoriteColor />
+    </div>
   );
 }
